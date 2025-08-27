@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite - Festa Club Penguin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', sans-serif;
+      background: linear-gradient(to top, #87ceeb, #ffffff);
+      overflow-x: hidden;
+      text-align: center;
+    }
+    header {
+      padding: 2rem;
+      background: #1c75bc;
+      color: white;
+      font-size: 2rem;
+      text-shadow: 2px 2px #0d3b66;
+    }
+    .pinguins {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .pinguins img {
+      width: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      background: #eee;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .play-btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      background: #ff8c00;
+      color: white;
+      border-radius: 20px;
+      text-decoration: none;
+      box-shadow: 0 4px 0 #c65c00;
+      transition: transform 0.2s;
+    }
+    .play-btn:hover {
+      transform: scale(1.1);
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255,255,255,0.8);
+      border-radius: 20px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background: #1c75bc;
+      color: white;
+      font-size: 0.9rem;
+    }
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      user-select: none;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+    /* puffles decorativos */
+    .puffle {
+      position: absolute;
+      width: 70px;
+      animation: bounce 3s infinite ease-in-out;
+    }
+    .puffle.left {
+      left: -90px;
+      top: 20%;
+    }
+    .puffle.right {
+      right: -90px;
+      top: 40%;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .puffles-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .puffles-row img {
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>🎉 Festa Club Penguin Rafa e Nathy 🎉</header>
+
+  <div class="pinguins">
+    <img src="Imagem do WhatsApp de 2025-08-27 à(s) 11.23.18_89c26f18.jpg" alt="Pinguim Giovanni">
+    <img src="Imagem do WhatsApp de 2025-08-27 à(s) 11.23.19_e9dc6587.jpg" alt="Pinguim Namorada">
+  </div>
+
+  <a href="#detalhes" class="play-btn">▶ Play Now</a>
+
+  <section id="detalhes">
+    <img src="Mini_Polka_Dot_Puffle_Hat_in_Puffle_Interface.png" class="puffle left" alt="Puffle Azul">
+    <img src="White_Puffle_Adopt.png" class="puffle right" alt="Puffle Verde">
+    <h2>Você está convidado!</h2>
+    <p><strong>Data:</strong> 20 de Setembro de 2025</p>
+    <p><strong>Local:</strong> Iglu secreto (endereço da festa)</p>
+    <p><strong>Missão:</strong> Comparecer com sua melhor fantasia de pinguim 🐧</p>
+
+    <div class="puffles-row">
+      <img src="anniversayy.png" alt="Puffle Azul">
+      <img src="CDFCJ.png" alt="Puffle Rosa">
+      <img src="b273679e4ee03659a715a4d30b3daa9d.png" alt="Puffle Preto">
+      <img src="ca36f138ac5b11fa7c5106bcd387fa76.png" alt="Puffle Amarelo">
+    </div>
+  </section>
+
+  <footer>
+    Club Penguin - Nathy & Rafa
+  </footer>
+
+  <script>
+    // gerar neve animada
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.textContent = '❄';
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+      document.body.appendChild(snowflake);
+      setTimeout(() => {
+        snowflake.remove();
+      }, 5000);
+    }
+    setInterval(createSnowflake, 200);
+  </script>
+</body>
+</html>
